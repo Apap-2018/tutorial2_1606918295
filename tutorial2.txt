@@ -38,6 +38,7 @@ Latihan? ?Request? ?Parameter
 Setiap ada perubahan pada kode, selalu usahakan run ulang 
 1. Mengapa tulisan “In My feeling” pada thymeleaf challenge tidak pernah muncul di browser? 
 Method tersebut menggunakan annotation RequestParam sehingga hanya mengembalikan string yang ada di dalam tagnya saja.
+Selain itu, terdapat th yang menjadikan text in my feeling tidak muncul.
 
 2. Ubah nilai anotasi Request Mapping “/challenge” menjadi “/viral/challenge”. 
 Deskripsikan hasil pada browser dan kembalikan ke bentuk sebelumnya! 
