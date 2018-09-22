@@ -1,0 +1,90 @@
+Latihan Project Viral 
+1. Ganti baris @RequestMapping(“/viral”) menjadi @RequestMapping(“/viral2jari”). Kemudian run kembali. 
+a. Apakah terjadi compile error? Tidak
+
+b. Coba akses localhost:8080/viral, berikan alasan dan jelaskan apa yang terjadi. 
+Muncul pesan error “Whitelabel Error Page. This application has no explicit mapping for /error, so you are seeing this as a fallback.
+There was an unexpected error (type=Not Found, status=404).
+No message available” yang berarti belum ada mapping untuk error yang terjadi.
+
+c. Apakah Kegunaan @RequestMapping(“/viral”) 
+Annotation untuk menandakan url yang digunakan untuk mengakses dan method (http verb) yang digunakan untuk mengakses url tersebut.
+
+Kembalikan menjadi @RequestMapping(“/viral”) 
+
+2. Ganti nama method index() menjadi nama method viral() 
+a. Apakah terjadi compile error? Tidak
+
+b. Coba akses localhost:8080/viral, berikan alasan dan jelaskan apa yang terjadi.
+Halaman memunculkan tampilan awal yang sudah dibuat di viral.html
+
+Kembalikan menjadi index() 
+
+3. Ganti string return type menjadi menjadi return “viral2jari” 
+a. Apakah terjadi compile error? Tidak
+
+b. Coba akses localhost:8080/viral, berikan alasan dan jelaskan apa yang terjadi.
+Muncul pesan error “Whitelabel Error Page. This application has no explicit mapping for /error, so you are seeing this as a fallback.
+There was an unexpected error (type=Not Found, status=404). 
+No message available” yang berarti belum ada mapping untuk error yang terjadi.
+
+c. Apakah kegunaan return type pada method controller tersebut?
+Untuk mengembalikan isi file viral.html yang sebelumnya sudah ditandakan dengan “/viral” di method tersebut. 
+Namun, karena string return typenya diganti, maka muncul error page. 
+
+Kembalikan return type menjadi “viral” 
+
+Latihan? ?Request? ?Parameter
+Setiap ada perubahan pada kode, selalu usahakan run ulang 
+1. Mengapa tulisan “In My feeling” pada thymeleaf challenge tidak pernah muncul di browser? 
+
+2. Ubah nilai anotasi Request Mapping “/challenge” menjadi “/viral/challenge”. 
+Deskripsikan hasil pada browser dan kembalikan ke bentuk sebelumnya! 
+
+Muncul pesan error “Whitelabel Error Page. This application has no explicit mapping for /error, so you are seeing this as a fallback.
+There was an unexpected error (type=Not Found, status=404). 
+No message available” yang berarti belum ada mapping untuk error yang terjadi.
+
+3. Akses localhost:8080/challenge. 
+a. Deskripsikan hasilnya 
+Muncul pesan error
+“This application has no explicit mapping for /error, so you are seeing this as a fallback.
+Wed Sep 19 15:23:31 ICT 2018
+There was an unexpected error (type=Bad Request, status=400).
+Required String parameter 'name' is not present”.
+
+b. Ubah methodnya menjadi seperti di bawah ini, deskripsikan lalu kembalikan ke bentuk awal!
+Muncul halaman yang berisi
+“null do you love me?
+Are you riding?”
+
+c. Ubah methodnya menjadi seperti di bawah ini, deskripsikan lalu kembalikan ke bentuk awal!
+Muncul halaman yang berisi
+“kiki do you love me?
+Are you riding?”
+
+Latihan? ?Path Variable
+Setiap ada perubahan pada kode, selalu usahakan run ulang
+1. Akses localhost:8080/challenge/ Apakah hasil dari halaman tersebut? 
+Muncul pesan error
+“This application has no explicit mapping for /error, so you are seeing this as a fallback.
+Wed Sep 19 15:34:55 ICT 2018
+There was an unexpected error (type=Bad Request, status=400).
+Required String parameter 'name' is not present”.
+
+2. Ubah method challengePath menjadi seperti berikut
+Muncul pesan error seperti berikut
+“This application has no explicit mapping for /error, so you are seeing this as a fallback.
+Wed Sep 19 15:42:40 ICT 2018
+There was an unexpected error (type=Internal Server Error, status=500).
+Ambiguous handler methods mapped for HTTP path 'http://localhost:8080/challenge/': {public java.lang.String com.example.demo.controller.
+PageController.challenge(java.lang.String,org.springframework.ui.Model), public java.lang.String com.example.demo.controller.
+PageController.challengePath(java.util.Optional,org.springframework.ui.Model)}”
+
+3. Akses localhost:8080/challenge/kiki 
+Apakah hasil dari halaman tersebut?
+Muncul halaman yang berisi
+“kiki do you love me?
+Are you riding?”
+
+
